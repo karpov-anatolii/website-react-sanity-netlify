@@ -1,0 +1,73 @@
+#topics .topic-image img {
+  width: 528px;
+  height: 282px;
+  object-fit: cover;
+}
+
+#topics .topics-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: 24px;
+}
+
+#topics .topics-list li {
+  color: #fff;
+  font-family: Alegreya;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 24px 0;
+  position: relative;
+}
+
+#topics .topics-list li::before {
+  content: "";
+  position: absolute;
+  background: var(--red-color);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  left: -25px;
+  top: 50%;
+  transform: translateY(
+    -50%
+  ); /*перемещает элемент вверх (по оси Y) на 50% от его собственной высоты.*/
+}
+
+#topics .content-container {
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+}
+
+#topics .wrapper {
+  width: 95%;
+  position: relative;
+}
+
+#topics .bg-element-1 {
+  position: absolute;
+  right: -24px;
+  bottom: 0;
+}
+
+/* Tablet version*/
+
+@media (max-width: 1040px) {
+  #topics .topic-image img {
+    width: 385px;
+    height: 280px;
+  }
+}
+
+/* Smartphone version*/
+
+@media (max-width: 720px) {
+  #topics .topic-image img {
+    display: none;
+  }
+
+  #topics .bg-element-1 {
+    right: 32px;
+  }
+}
